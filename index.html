@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrossLearn Registration</title>
     <style>
+        :root {
+            --background: #eef6f9;
+            --text: #1f2937;
+            --heading: #243b53;
+            --subheading: #315b7a;
+            --link: #005bb5;
+            --muted: #596676;
+            --card: #ffffff;
+            --line: #cbd5e1;
+            --shadow: rgba(0, 0, 0, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
@@ -12,30 +28,31 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: #1f2937;
+            color: var(--text);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 24px 0;
         }
 
         .container {
-            width: min(760px, calc(100vw - 48px));
-            background: #ffffff;
+            width: min(920px, calc(100vw - 48px));
+            background: var(--card);
             padding: 40px 50px;
             border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 30px var(--shadow);
             text-align: center;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #243b53;
+            color: var(--heading);
             margin-bottom: 16px;
         }
 
         h2 {
-            color: #315b7a;
+            color: var(--subheading);
             margin-top: 30px;
             font-size: 1.8rem;
         }
@@ -46,7 +63,7 @@
         }
 
         a {
-            color: #005bb5;
+            color: var(--link);
             font-weight: bold;
             text-decoration: none;
         }
@@ -57,7 +74,64 @@
 
         .demo-note {
             font-style: italic;
-            color: #596676;
+            color: var(--muted);
+        }
+
+        .form-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 24px 0 16px;
+        }
+
+        .form-link {
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .tutor-section {
+            margin-top: 36px;
+            border-top: 1px solid var(--line);
+            padding-top: 24px;
+        }
+
+        .tutor-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .tutor-card {
+            padding: 12px 16px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #f8fafc;
+        }
+
+        .tutor-name {
+            display: block;
+            color: var(--heading);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .tutor-subject {
+            display: block;
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 20px;
+            }
+
+            .tutor-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -65,13 +139,64 @@
     <div class="container">
         <h1>CrossLearn Registration Page</h1>
         <p>Welcome to CrossLearn's official registration page!</p>
-        <p>Please fill out the form below to register:</p>
+        <p>Please fill out the form below to register if you are a learner:</p>
 
-        <h3><a href="https://tinyurl.com/CrossLearnRegistrationFormDemo" target="_blank">CrossLearn Registration Form</a></h3>
+        <div class="form-links">
+            <h3><a class="form-link" href="https://tinyurl.com/CrossLearnRegistrationFormDemo" target="_blank">CrossLearn Registration Form</a></h3>
+        </div>
 
         <p class="demo-note">Note: This is a demo form. Please do not submit any personal information.</p>
 
-        <h2>Thank You for joining CrossLearn</h2>
+        <p>Please fill out the form below to register if you are a tutor:</p>
+        <div class="form-links">
+            <h3><a class="form-link" href="https://tinyurl.com/CrossLearnTutorRegistrationFormDemo" target="_blank">CrossLearn Tutor Registration Form</a></h3>
+        </div>
+
+        <section class="tutor-section">
+            <h2>Available Tutors</h2>
+            <div class="tutor-grid">
+                <div class="tutor-card">
+                    <span class="tutor-name">Bonnie Lee</span>
+                    <span class="tutor-subject">ELA</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Theodore Tian</span>
+                    <span class="tutor-subject">Math</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Ellie Zhang</span>
+                    <span class="tutor-subject">Science</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Bryce Xue</span>
+                    <span class="tutor-subject">History</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Jesse Han</span>
+                    <span class="tutor-subject">Math</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Alex Liu</span>
+                    <span class="tutor-subject">ELA</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">William Lai</span>
+                    <span class="tutor-subject">Science</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Jasmine Chen</span>
+                    <span class="tutor-subject">History</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Hien Zhang</span>
+                    <span class="tutor-subject">Math</span>
+                </div>
+                <div class="tutor-card">
+                    <span class="tutor-name">Hic Sun</span>
+                    <span class="tutor-subject">ELA</span>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
