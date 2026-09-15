@@ -28,8 +28,10 @@
             color: var(--text);
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 2in;
             padding: 24px 0;
         }
 
@@ -112,7 +114,8 @@
         }
 
         .mission-section {
-            margin: 28px 0;
+            width: min(920px, calc(100vw - 48px));
+            margin: 0;
             padding: 20px 24px;
             background: #f8fafc;
             border: 1px solid var(--line);
@@ -187,6 +190,10 @@
                 padding: 24px 20px;
             }
 
+            .mission-section {
+                width: calc(100vw - 48px);
+            }
+
             .tutor-grid {
                 grid-template-columns: 1fr;
             }
@@ -209,11 +216,6 @@
         <div class="form-links">
             <h3><a class="form-link" href="https://tinyurl.com/CrossLearnTutorRegistrationFormDemo" target="_blank">CrossLearn Tutor Registration Form</a></h3>
         </div>
-
-        <section class="mission-section">
-            <h2>Our Mission</h2>
-            <p>Our mission is to empower students to learn, lead, and serve, fostering academic growth, leadership skills, and cross-cultural understanding.</p>
-        </section>
 
         <div class="note-inline">Tutor to learner pairing is random and based on availability and subject.</div>
 
@@ -268,5 +270,10 @@
             <h2>And remember: All of the programs are completely free!</h2>
         </section>
     </div>
+
+    <section class="mission-section">
+        <h2>Our Mission</h2>
+        <p>Our mission is to empower students to learn, lead, and serve, fostering academic growth, leadership skills, and cross-cultural understanding.</p>
+    </section>
 </body>
 </html>
